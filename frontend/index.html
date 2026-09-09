@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f1e9">
+  <title>StockBot | Investment research assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="StockBot home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>stockbot</span>
+      </a>
+      <div class="topbar-meta">
+        <span class="status-dot"></span>
+        <span>Research mode</span>
+        <button class="icon-button" id="clear-chat" type="button" title="Clear conversation" aria-label="Clear conversation">&#8635;</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="sidebar">
+        <div class="eyebrow">Your market co-pilot</div>
+        <h1>Make better-informed investment decisions.</h1>
+        <p class="intro">Explore stocks and ETFs with plain-English context around price, risk, fees, and fit.</p>
+
+        <div class="snapshot">
+          <div class="snapshot-heading">
+            <span>What we can explore</span>
+            <span class="live-label">LIVE SOON</span>
+          </div>
+          <div class="fact-list">
+            <div class="fact"><span class="fact-icon">$</span><span>Price &amp; performance</span></div>
+            <div class="fact"><span class="fact-icon">%</span><span>Risk &amp; volatility</span></div>
+            <div class="fact"><span class="fact-icon">+</span><span>Fees &amp; holdings</span></div>
+            <div class="fact"><span class="fact-icon">~</span><span>Strategy &amp; fit</span></div>
+          </div>
+        </div>
+
+        <div class="sidebar-note">
+          <span class="note-line"></span>
+          <p>Information for research and education. Not personalized financial advice.</p>
+        </div>
+      </aside>
+
+      <section class="chat-panel" aria-label="Chat with StockBot">
+        <div class="chat-header">
+          <div>
+            <div class="chat-title">Ask StockBot</div>
+            <div class="chat-subtitle">Stocks, ETFs &amp; investing concepts</div>
+          </div>
+          <div class="secure-badge"><span class="lock-icon">&#9670;</span> Private session</div>
+        </div>
+
+        <div class="messages" id="messages" aria-live="polite">
+          <div class="message assistant-message welcome-message">
+            <div class="avatar">S</div>
+            <div class="message-content">
+              <div class="message-label">StockBot <span>now</span></div>
+              <div class="bubble">Hi, I’m StockBot. Ask me to explore a stock, compare ETFs, or explain an investing concept.</div>
+            </div>
+          </div>
+          <div class="suggestion-block" id="suggestion-block">
+            <div class="suggestion-label">Try asking</div>
+            <div class="suggestions">
+              <button class="suggestion" type="button" data-question="What is the current price of VFV?">Current price of VFV <span>&rarr;</span></button>
+              <button class="suggestion" type="button" data-question="What are the fees and basic details of VFV?">VFV fees &amp; details <span>&rarr;</span></button>
+              <button class="suggestion" type="button" data-question="What are the top holdings in VFV?">Top VFV holdings <span>&rarr;</span></button>
+            </div>
+          </div>
+        </div>
+
+        <form class="composer" id="chat-form">
+          <label class="sr-only" for="question">Ask about stocks and ETFs</label>
+          <textarea id="question" rows="1" placeholder="Ask about a stock, ETF, or investing concept..." autocomplete="off"></textarea>
+          <button class="send-button" type="submit" aria-label="Send question" title="Send question">
+            <span>&uarr;</span>
+          </button>
+          <div class="composer-footer"><span>StockBot can make mistakes. Verify important information.</span><span class="shortcut">Enter to send</span></div>
+        </form>
+      </section>
+    </main>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
