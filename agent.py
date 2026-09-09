@@ -1,4 +1,4 @@
-"""Steps 2-4: the LLM router/summarizer. Given a clean question, the model
+"""The LLM router/summarizer. Given a clean question, the model
 either answers directly or calls the price tool, then produces the final answer."""
 
 import json

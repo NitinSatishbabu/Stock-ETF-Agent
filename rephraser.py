@@ -1,4 +1,4 @@
-"""Step 1: rephrase the raw user question into a clean, standalone question.
+"""Rephrase the raw user question into a clean, standalone question.
 Resolves company names to tickers where obvious, fixes typos, and later
 (once chat memory exists) folds prior context into a standalone question."""
 
