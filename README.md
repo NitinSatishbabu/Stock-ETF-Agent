@@ -30,4 +30,3 @@ cp .env.example .env        # add your OpenRouter key
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
-Or with Docker: `docker build -t stock-etf-agent . && docker run -p 8000:8000 --env-file .env stock-etf-agent`
